@@ -4,7 +4,10 @@ import App from './App.jsx'
 import './index.css'
 import { analytics } from './firebase/firebase.js'
 
-analytics.logEvent('homepage_visit')
+if (analytics && typeof analytics.logEvent === 'function') {
+  analytics.logEvent('homepage_visit') // Log an analytics event
+}
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
