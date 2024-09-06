@@ -52,9 +52,7 @@ function Homepage(myprofile) {
         </div>
 
         <div className="part2 flex flex-col p-5 text-center justify-center">
-          <div className="link1 min-w-40 p-3">link1</div>
-          <div className="link2 min-w-40 p-3">link2</div>
-          <div className="link3 min-w-40 p-3">link3</div>
+          Having some tight schedule maintaining some other projects. Please come back later.
         </div>
       </div>
     </>
