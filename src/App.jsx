@@ -1,11 +1,10 @@
-import Homepage from "./components/Homepage";
+import NewHome from "./components/Test1";
 
 function App() {
-  const myprofile = "https://avatars.githubusercontent.com/u/87885588?v=4";
   return (
-    <>
-      <Homepage myprofile={myprofile} />
-    </>
+    <div className="min-h-[100dvh] min-w-[100vw] flex items-center justify-center">
+      <NewHome />
+    </div>
   );
 }
 
