@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home.jsx";
 import CursorGlowEffect from "./components/CursorGlowEffect.jsx";
-//import background tiles
 import BackgroundTiles from "./components/BackgroundTiles.jsx";
 import Header from "./components/Header.jsx";
 import Projects from "./components/Projects.jsx";

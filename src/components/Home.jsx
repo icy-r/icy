@@ -13,7 +13,7 @@ const Home = () => {
         const [userResponse, reposResponse] = await Promise.all([
           fetch("https://api.github.com/users/icy-r"),
           fetch(
-            "https://api.github.com/users/icy-r/repos?sort=updated&per_page=4"
+            "https://api.github.com/users/icy-r/repos?sort=updated&per_page=10"
           ),
         ]);
 

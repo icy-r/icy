@@ -41,7 +41,7 @@ const BackgroundTiles = () => {
       {tiles.map((tile) => (
         <motion.div
           key={tile.id}
-          className="absolute"
+          className="absolute tile"
           initial={{ opacity: 0, scale: 0 }}
           animate={{
             opacity: 1,

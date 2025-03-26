@@ -31,12 +31,14 @@ const CursorGlowEffect = () => {
 
   useEffect(() => {
     if (hoveredTile) {
-      hoveredTile.style.backgroundColor = "rgba(255, 255, 255, 0.)";
+      hoveredTile.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+      hoveredTile.style.transition = "background-color 0.3s ease";
     }
 
     return () => {
       if (hoveredTile) {
         hoveredTile.style.backgroundColor = "";
+        hoveredTile.style.transition = "";
       }
     };
   }, [hoveredTile]);
@@ -47,7 +49,7 @@ const CursorGlowEffect = () => {
       style={{
         left: position.x - 24,
         top: position.y - 24,
-        transition: "transform 0.5Ss ease-out",
+        transition: "transform 0.1s ease-out",
         backgroundColor: "white",
         opacity: 0.1,
       }}
