@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Developer Portfolio</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Building Experience...</div>
+    </div>
+
+    <nav id="main-nav">
+        <div class="nav-content">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section active">
+            <div class="content">
+                <h1>Interactive Developer Portfolio</h1>
+                <p class="tagline">Explore my work in an immersive 3D environment</p>
+                <div class="cta-buttons">
+                    <button id="explore-btn" class="primary-btn">Explore Projects</button>
+                    <button id="contact-btn" class="secondary-btn">Get in Touch</button>
+                </div>
+            </div>
+            <div id="scene-container"></div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div id="projects-container" class="projects-grid">
+                <!-- Projects will be loaded here via GitHub API -->
+                <div class="loading">Loading projects...</div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Professional Experience</h2>
+            <div id="experience-container" class="experience-grid">
+                <!-- Experience will be loaded here via LinkedIn API or fallback data -->
+                <div class="loading">Loading experience...</div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills & Technologies</h2>
+            <div id="skills-container" class="skills-container">
+                <!-- Skills visualization will be rendered here -->
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-form" class="primary-btn">Send Message</button>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link github">GitHub</a>
+                    <a href="#" target="_blank" class="social-link linkedin">LinkedIn</a>
+                    <a href="#" target="_blank" class="social-link twitter">Twitter</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="project-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="project-detail-content"></div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
