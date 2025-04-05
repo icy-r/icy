@@ -21,18 +21,19 @@ const Experience = () => {
     ];
     
     const education = [
-        {
-            degree: "BSc (Hons) Degree in Information Technology (Specialized in SE)",
-            institution: "Sri Lanka Institute of Information Technology (SLIIT)",
-            period: "2023 - 2027",
-            achievements: "First Year GPA: 3.92/4.00"
-        },
-        {
-            degree: "GCE Advanced Level Examination",
-            institution: "Vembadi Girls' High School",
-            period: "2019 - 2022",
-            achievements: "3 Distinctions (A) in Bio Science Stream"
-        }
+      {
+        degree:
+          "BSc (Hons) Degree in Information Technology (Specialized in SE)",
+        institution: "Sri Lanka Institute of Information Technology (SLIIT)",
+        period: "2023 - 2027",
+        achievements: "Dean's List - Year 2 Semester 1",
+      },
+      {
+        degree: "Secondary Education",
+        institution:
+          "Jaya MMV - Kekirawa (A/L) | Kekunagolla National School - Kurunegala (O/L)",
+        period: "2017 - 2021",
+      },
     ];
     
     const extracurricular = [
