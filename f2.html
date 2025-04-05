@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Mohamed Asath - CV</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #4d4d4d;
+            --accent-color: #0056b3;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #333333;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--secondary-color);
+            line-height: 1.4;
+            font-size: 10pt; /* Reduced font size */
+        }
+        
+        /* A4 Paper size: 210mm x 297mm */
+        .page {
+            width: 210mm;
+            height: 297mm; /* Fixed height */
+            padding: 10mm; /* Reduced padding */
+            margin: 10mm auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden; /* Prevent content overflow */
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px; /* Reduced padding */
+            margin-bottom: 10px; /* Reduced margin */
+            border-radius: 4px;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .name-title {
+            flex: 2;
+        }
+        
+        h1 {
+            font-size: 18pt; /* Reduced size */
+            margin-bottom: 4px; /* Reduced margin */
+        }
+        
+        .headline {
+            font-size: 10pt; /* Reduced size */
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            flex: 1;
+            text-align: right;
+            font-size: 8pt; /* Reduced size */
+        }
+        
+        .contact-item {
+            margin-bottom: 3px; /* Reduced margin */
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .summary {
+            background-color: var(--light-gray);
+            padding: 10px; /* Reduced padding */
+            margin-bottom: 10px; /* Reduced margin */
+            font-size: 9pt; /* Reduced size */
+            border-radius: 4px;
+        }
+        
+        section {
+            margin-bottom: 10px; /* Reduced margin */
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 12pt; /* Reduced size */
+            margin-bottom: 6px; /* Reduced margin */
+            padding-bottom: 3px; /* Reduced padding */
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        h3 {
+            font-size: 10pt; /* Reduced size */
+            margin-bottom: 4px; /* Reduced margin */
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px; /* Reduced gap */
+            margin-bottom: 8px; /* Reduced margin */
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px; /* Reduced gap */
+        }
+        
+        .skill-item {
+            background-color: var(--light-gray);
+            padding: 2px 6px; /* Reduced padding */
+            border-radius: 10px; /* Reduced radius */
+            display: inline-block;
+            font-size: 8pt; /* Reduced size */
+        }
+        
+        .experience-item, .education-item, .project-item, 
+        .certification-item, .extracurricular-item, .references-item {
+            margin-bottom: 8px; /* Reduced margin */
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px; /* Reduced margin */
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        .item-date {
+            color: var(--secondary-color);
+            font-size: 8pt; /* Reduced size */
+        }
+        
+        .item-subtitle {
+            margin-bottom: 2px; /* Reduced margin */
+            color: var(--secondary-color);
+            font-style: italic;
+            font-size: 8pt; /* Reduced size */
+        }
+        
+        p {
+            font-size: 9pt; /* Reduced size */
+            margin-bottom: 3px; /* Reduced margin */
+        }
+        
+        .project-links {
+            margin-top: 1px; /* Reduced margin */
+            font-size: 8pt; /* Reduced size */
+        }
+        
+        .project-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .tech-stack {
+            font-size: 8pt; /* Reduced size */
+            margin-top: 1px; /* Reduced margin */
+            margin-bottom: 3px; /* Reduced margin */
+        }
+        
+        .tech-stack strong {
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+        
+        .achievements-list {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8px; /* Reduced margin */
+        }
+        
+        .achievements-list li {
+            position: relative;
+            padding-left: 10px; /* Reduced padding */
+            margin-bottom: 3px; /* Reduced margin */
+            width: 50%;
+            font-size: 9pt; /* Reduced size */
+        }
+        
+        .achievements-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .languages-interests {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px; /* Reduced gap */
+            margin-bottom: 10px; /* Reduced margin */
+        }
+        
+        .languages, .interests {
+            flex: 1;
+        }
+        
+        .languages-list, .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px; /* Reduced gap */
+        }
+        
+        footer {
+            text-align: center;
+            padding: 6px; /* Reduced padding */
+            background-color: var(--light-gray);
+            font-size: 8pt; /* Reduced size */
+            color: var(--secondary-color);
+            border-radius: 4px;
+            position: absolute;
+            bottom: 10mm;
+            left: 10mm;
+            right: 10mm;
+        }
+        
+        /* Compact specific sections to fit better */
+        .experience-item p,
+        .project-item p {
+            line-height: 1.3; /* Tighter line height */
+        }
+        
+        /* Adjust spacing for second page */
+        #page2 {
+            padding-bottom: 40px; /* Space for footer */
+        }
+        
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+            
+            .page {
+                margin: 0;
+                padding: 10mm;
+                box-shadow: none;
+                page-break-after: always;
+                width: 210mm;
+                height: 297mm;
+                overflow: hidden;
+            }
+            
+            .page:last-child {
+                page-break-after: avoid;
+            }
+            
+            header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .summary, footer, .skill-item {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- First Page -->
+    <div class="page" id="page1">
+        <header>
+            <div class="profile-header">
+                <div class="name-title">
+                    <h1>M Mohamed Asath</h1>
+                    <div class="headline">Software Engineer Intern @ IFS | Computer Software Engineering</div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <a href="mailto:asath12882@gmail.com">asath12882@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:+94770664182">+94 77 066 4182</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://icy-r.dev" target="_blank">www.icy-r.dev</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/mohamad-asath/" target="_blank">LinkedIn: Mohamad Asath</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/icy-r" target="_blank">GitHub: icy-r</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="summary">
+            <p>As a software engineer intern at IFS, I specialize in database queries and server-side development while pursuing my education at SLIIT. I am passionate about applying web technologies to create innovative and efficient software solutions. With a strong academic record and hands-on experience in development, I am committed to continuous learning and excellence in software engineering.</p>
+        </div>
+        
+        <section>
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <div class="item-header">
+                    <div class="item-title">Software Engineer Intern</div>
+                    <div class="item-date">November 2024 - Present</div>
+                </div>
+                <div class="item-subtitle">IFS | Colombo District, Western Province, Sri Lanka (Hybrid)</div>
+                <p>
+                    - Optimized PL/SQL and Oracle SQL queries to enhance database performance<br>
+                    - Collaborated with QA teams to design and execute manual test cases<br>
+                    - Modernized legacy Java EE systems by reimplementing core logic using Marble Framework<br>
+                    - Participated in Agile workflows for iterative feature delivery<br>
+                    - Maintained server-side components using Java/OSGi for enterprise applications
+                </p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">BSc (Hons) Degree in Information Technology (Specialized in SE)</div>
+                    <div class="item-date">February 2023 - Present</div>
+                </div>
+                <div class="item-subtitle">Sri Lanka Institute of Information Technology (SLIIT)</div>
+                <p>CGPA: 3.7</p>
+            </div>
+            <div class="education-item">
+                <div class="item-header">
+                    <div class="item-title">Secondary Education</div>
+                    <div class="item-date">2017 - 2021</div>
+                </div>
+                <div class="item-subtitle">Jaya MMV - Kekirawa (A/L) | Kekunagolla National School - Kurunegala (O/L)</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">JavaScript/TypeScript</span>
+                        <span class="skill-item">Java/JUnit</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C/C++</span>
+                        <span class="skill-item">React.js</span>
+                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-item">Vite</span>
+                        <span class="skill-item">Framer Motion</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Express.js</span>
+                        <span class="skill-item">RESTful APIs</span>
+                        <span class="skill-item">JWT Authentication</span>
+                        <span class="skill-item">Android (Java)</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">Firebase</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">Git & GitHub</span>
+                        <span class="skill-item">SQL/PLSQL</span>
+                        <span class="skill-item">Postman</span>
+                        <span class="skill-item">Figma (basic)</span>
+                        <span class="skill-item">Android Studio</span>
+                        <span class="skill-item">npm/yarn</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Linux/TAR</span>
+                        <span class="skill-item">Marble Framework</span>
+                        <span class="skill-item">Java/OSGi</span>
+                        <span class="skill-item">CI/CD Pipelines</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Leadership</span>
+                        <span class="skill-item">Team Management</span>
+                        <span class="skill-item">Communication</span>
+                        <span class="skill-item">Presentation Skills</span>
+                        <span class="skill-item">Teamwork</span>
+                        <span class="skill-item">Problem-solving</span>
+                        <span class="skill-item">Time Management</span>
+                        <span class="skill-item">Multitasking</span>
+                        <span class="skill-item">Adaptability</span>
+                        <span class="skill-item">Analytical Thinking</span>
+                        <span class="skill-item">Project Management</span>
+                        <span class="skill-item">Fast Learner</span>
+                        <span class="skill-item">Self-Motivated</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Projects</h2>
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Personal Portfolio Website</div>
+                </div>
+                <div class="project-links">
+                    <a href="https://icy-r.dev">https://icy-r.dev</a>
+                </div>
+                <p>A modern, responsive personal portfolio website showcasing my projects and professional experience. Features dynamic content loading, responsive design, and modern UI/UX principles.</p>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> React.js, Vite, Modern UI/UX design principles, ESLint, SWC, GitHub Pages
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">RESTful Personal Finance Management System</div>
+                </div>
+                <p>Developed a comprehensive RESTful API for personal finance management, featuring user authentication, transaction tracking, budget management, and financial goal setting. Implemented secure user authentication and complete CRUD operations.</p>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Express.js (Node.js), MongoDB, JWT, Swagger/OpenAPI, Automated testing, pnpm
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">OSGi-based Modular System</div>
+                </div>
+                <p>Implemented a modular system using OSGi framework, demonstrating enterprise-level software architecture principles. Features dynamic module management and component-based development.</p>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Java, OSGi Framework, Maven/Gradle, Modular System Design, Component-based Architecture
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Second Page -->
+    <div class="page" id="page2">
+        <section>
+            <h2>Projects (Continued)</h2>
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">Skyhawks Data Analysis</div>
+                </div>
+                <p>Data analysis project utilizing Jupyter Notebooks for data processing, visualization, and statistical analysis. Demonstrates proficiency in data science tools and analytical thinking.</p>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Python, Jupyter Notebook, Pandas, NumPy, Matplotlib/Seaborn, Git
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">AIESEC Platform Development</div>
+                    <div class="item-date">2024</div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/icy-r/aiesec">github.com/icy-r/aiesec</a>
+                </div>
+                <p>Full-stack development of a platform for global talent exchange initiatives, featuring user management and project coordination capabilities.</p>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> JavaScript, React, Node.js, REST APIs
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="item-header">
+                    <div class="item-title">AIESEC Partner Integration</div>
+                    <div class="item-date">2024</div>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/icy-r/aiesec-p1">github.com/icy-r/aiesec-p1</a>
+                </div>
+                <p>Collaborative project implementing partner integration features for global talent exchange platform.</p>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> JavaScript, API Integration, System Architecture
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Certifications</h2>
+            <div class="certification-item">
+                <div class="item-header">
+                    <div class="item-title">Introduction to Career Skills in Data Analytics</div>
+                    <div class="item-date">Issued March 2025</div>
+                </div>
+                <div class="item-subtitle">LinkedIn</div>
+            </div>
+            <div class="certification-item">
+                <div class="item-header">
+                    <div class="item-title">Introduction to Prompt Engineering</div>
+                    <div class="item-date">Issued June 2024</div>
+                </div>
+                <div class="item-subtitle">GitHub</div>
+            </div>
+            <div class="certification-item">
+                <div class="item-header">
+                    <div class="item-title">Mobile App Development</div>
+                    <div class="item-date">Issued July 2024</div>
+                </div>
+                <div class="item-subtitle">Simply Learn</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Achievements</h2>
+            <ul class="achievements-list">
+                <li>Dean's List - Year 2 Semester 1</li>
+                <li>Winner - Mini Hackathon by MS Club of SLIIT</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Extracurricular Activities</h2>
+            <div class="extracurricular-item">
+                <div class="item-header">
+                    <div class="item-title">Secretary - Mozilla Campus Club of SLIIT</div>
+                    <div class="item-date">March 2025 - Present</div>
+                </div>
+                <p>Coordinating club activities and facilitating tech community engagement.</p>
+            </div>
+            
+            <div class="extracurricular-item">
+                <div class="item-header">
+                    <div class="item-title">Team Developer - SLIIT FOSS Community</div>
+                    <div class="item-date">August 2024 - Present</div>
+                </div>
+                <p>Contributing to open-source projects and participating in code reviews.</p>
+            </div>
+            
+            <div class="extracurricular-item">
+                <div class="item-header">
+                    <div class="item-title">Team Leader - oGTe</div>
+                    <div class="item-date">January 2024 - Present</div>
+                </div>
+                <div class="item-subtitle">AIESEC in SLIIT | Part-time | Hybrid</div>
+                <p>Leading cross-cultural projects and global talent exchange initiatives.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>References</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;">
+                <div class="references-item" style="flex: 1; min-width: 45%;">
+                    <div class="item-title">Miss. Kirshika Sriranjan</div>
+                    <div style="font-size: 8pt;">Senior Program Manager, A & D - IFS Canada</div>
+                    <div style="font-size: 8pt;">Krishika.sriranjan@gmail.com | +94 76 807 8470</div>
+                </div>
+                
+                <div class="references-item" style="flex: 1; min-width: 45%;">
+                    <div class="item-title">Miss. Jithmi Weerasekara</div>
+                    <div style="font-size: 8pt;">Lead Software Engineer - IFS R&D International</div>
+                    <div style="font-size: 8pt;">jithmij@gmail.com | +94 71 581 1192</div>
+                </div>
+                
+                <div class="references-item" style="flex: 1; min-width: 45%;">
+                    <div class="item-title">Mr. Subhan Kariyawasam</div>
+                    <div style="font-size: 8pt;">Lead Software Engineer - IFS R&D International</div>
+                    <div style="font-size: 8pt;">subhan.kariyawasam@ifs.com | +95 77 621 6705</div>
+                </div>
+                
+                <div class="references-item" style="flex: 1; min-width: 45%;">
+                    <div class="item-title">Mr. Uditha Saranga</div>
+                    <div style="font-size: 8pt;">Senior Director – Strategic Tech Lead, Office of COO</div>
+                    <div style="font-size: 8pt;">uditha.saranga@ifs.com | +94 11 209 5488</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="interests">
+            <h2>Interests</h2>
+            <div class="interests-list">
+                <span class="skill-item">Android App Development</span>
+                <span class="skill-item">UI/UX Design</span>
+                <span class="skill-item">Cloud Computing</span>
+                <span class="skill-item">AWS</span>
+                <span class="skill-item">Firebase Hosting</span>
+                <span class="skill-item">Server-side Development</span>
+                <span class="skill-item">Backend Architecture</span>
+                <span class="skill-item">Problem Solving</span>
+                <span class="skill-item">Algorithmic Thinking</span>
+                <span class="skill-item">DevOps (Beginner)</span>
+                <span class="skill-item">Full Stack Development</span>
+                <span class="skill-item">Open Source Contribution</span>
+                <span class="skill-item">Linux</span>
+            </div>
+        </section>
+        
+        <!-- <footer>
+            <p>Resumes don't perform jobs; people do.</p>
+        </footer> -->
+    </div>
+</body>
+</html>
